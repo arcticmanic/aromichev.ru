@@ -1,0 +1,9 @@
+# Rewrite to no www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule .* http://%1/$0 [L,R=301]
+
+#AuthType Basic
+#AuthName "Say the password or bite my shiny *ss"
+#AuthUserFile /home/m/manic/aromichev.ru/public_html/foo/.htpasswd
+#Require valid-user
